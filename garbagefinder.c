@@ -2,6 +2,17 @@
  * garbagefinder - Recursively searches current directory for files containing
  * only the null character (0x00) and reports those files' names to stdout.
  * 
+ *
+ * I created this quick hack after I had a hard drive crash. At first glance, I
+ * was able to recover all files. But many of them turned out to be full of 0x00
+ * and nothing else. So I wrote this tool to recover all the lost space on my new
+ * disk, because storing gigabytes worth of zeroes is somewhat pointless.
+ * 
+ * Just make it and then run it from any directory. It will search the files in
+ * the current directory and all subdirectories recursively, and print out one
+ * line per garbage file found, relative to the current directory.
+ * 
+ *
  * Copyright (C) 2010 Crazor <crazor@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify it under
